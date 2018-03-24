@@ -1,7 +1,8 @@
 /**
- * All functions you make for the assignment must be implemented in this file.
- * Do not submit your assignment with a main function in this file.
- * If you submit with a main function in this file, you will get a zero.
+Author: Kyle Marcus Enriquez
+Dynamic Memory Allocator - Uses an explicit free list with best-fit searching for free memory blocks.
+						   Handles overhead memory for headers and footers and also for padding/alignment
+						   and splinters.
  */
 #include "sfmm.h"
 #include <stdio.h>
@@ -9,11 +10,6 @@
 #include <errno.h>
 #include <string.h>
 
-/**
- * You should store the head of your free list in this variable.
- * Doing so will make it accessible via the extern statement in sfmm.h
- * which will allow you to pass the address to sf_snapshot in a different file.
- */
 sf_free_header* freelist_head = NULL;
 int max = 4;
 static int i = 0;

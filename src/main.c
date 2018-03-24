@@ -1,3 +1,10 @@
+/*
+Author: Kyle Marcus Enriquez
+Dynamic Memory Allocator - Uses an explicit free list with best-fit searching for free memory blocks.
+						   Handles overhead memory for headers and footers and also for padding/alignment
+						   and splinters
+*/
+
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
